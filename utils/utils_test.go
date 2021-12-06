@@ -12,3 +12,22 @@ func TestGetIntSliceFromFile(t *testing.T) {
 		t.Errorf("Expected %v, got %v", e, r)
 	}
 }
+
+func TestSumOfIntSlice(t *testing.T) {
+	i := []int{1, 2, 3, 4}
+	e := 10
+	r := SumOfIntSlice(i)
+	if r != e {
+		t.Errorf("Expected %d, got %d", e, r)
+	}
+
+}
+func TestSumOfIntSliceRecursive(t *testing.T) {
+	i := []int{1, 2, 3, 4}
+	e := 10
+	r := SumOfIntSliceRecursive(i)
+	if r != e {
+		t.Errorf("Expected %d, got %d", e, r)
+	}
+
+}
