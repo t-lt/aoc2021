@@ -1,9 +1,9 @@
 package main
  
-import "aoc2021/aoc_1_2"
+import "aoc2021/aoc_2_2"
 
 func main() {
-	r := aoc_1_2.GetIncreasingDepthSlidingWindow("input/day1")
+	r := aoc_2_2.Aoc_2_2("input/day2")
 	println(r)
 }
 

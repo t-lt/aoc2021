@@ -31,3 +31,11 @@ func TestSumOfIntSliceRecursive(t *testing.T) {
 	}
 
 }
+
+func TestParseMultiColumnsFile(t *testing.T) {
+	e := [][]string{{"forward", "5"},{"down", "5"}}
+	r := ParseMultiColumnsFile("utils_testdata/csvtestdata")
+	if !reflect.DeepEqual(e, r) {
+		t.Errorf("Expected % v, got %v", e, r)
+	}
+}

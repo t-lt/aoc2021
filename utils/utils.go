@@ -2,6 +2,7 @@ package utils
 
 import (
 	"bufio"
+	"encoding/csv"
 	"log"
 	"os"
 	"strconv"
@@ -44,4 +45,18 @@ func add(s []int, i int) int {
 		return 0
 	}
 	return add(s, i-1) + s[i-1]
+}
+
+func ParseMultiColumnsFile(path string) [][]string{
+	f, e := os.Open(path)
+	if e != nil {
+		log.Fatalf("File %s not found", path)
+	}
+	r := csv.NewReader(f)
+	r.Comma = ' ' ;
+	records, err := r.ReadAll()
+	if err != nil {
+		log.Fatalf("Error parsing csv : %v" ,e )
+	} 
+	return records
 }
