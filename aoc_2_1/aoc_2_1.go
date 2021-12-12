@@ -13,7 +13,7 @@ type enginePostion struct {
 }
 //first column = command, second command = distance 
 func Aoc_2_1(path string) int{
-	ur := utils.ParseMultiColumnsFile(path)
+	ur := utils.ParseMultiColumnsFile(path, ' ')
 	var postion enginePostion
 	
 	for i, v := range ur {

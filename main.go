@@ -1,10 +1,15 @@
 package main
- 
-import "aoc2021/aoc_2_2"
+
+import (
+	"aoc2021/aoc_3_1"
+	"fmt"
+	"strconv"
+)
 
 func main() {
-	r := aoc_2_2.Aoc_2_2("input/day2")
-	println(r)
+	mstcommonstr := aoc_3_1.FindMostCommonBits("input/day3")
+	println(mstcommonstr)
+	mstcommon, _ := strconv.ParseUint(mstcommonstr, 2, 64)
+	leastcommon := aoc_3_1.FindLeastCommonBits(mstcommonstr)
+	fmt.Printf("%d", uint(mstcommon)*leastcommon)
 }
-
-

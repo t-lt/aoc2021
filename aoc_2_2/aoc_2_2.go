@@ -14,7 +14,7 @@ type enginePostion struct {
 
 func Aoc_2_2(path string) int {
 	var position enginePostion
-	p := utils.ParseMultiColumnsFile(path)
+	p := utils.ParseMultiColumnsFile(path , ' ')
 	for i, ur := range p {
        d, err := strconv.Atoi(ur[1])
 	   if err != nil {
